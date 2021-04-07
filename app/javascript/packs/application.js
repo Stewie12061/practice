@@ -12,6 +12,10 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+// load css của application
+// thêm bởi: Stewie
+// lúc: xx:xx
 import '../stylesheets/application';
 const images = require.context('../images', true)
 const imagePath = (name) => { images(name, true) }
