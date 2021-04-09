@@ -9,7 +9,7 @@
 	z-index: 30;
 	position: fixed; top: 0; right: 0; 
 	opacity:0; visibility:hidden;
-	background-color: rgba(34, 34, 34, 0.6);
+	background-color: rgba(248, 86, 123, 0.7);
 	transition:opacity .2s linear, visibility 0.2s, width 2s ease-in;
   &.active{
     z-index:10; 

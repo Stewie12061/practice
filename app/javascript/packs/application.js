@@ -62,5 +62,12 @@ document.addEventListener("DOMContentLoaded", function(){
     close_offcanvas();
   });
 
+  document.querySelectorAll('[data-hi-trigger]').forEach(function(element){
+    let jackie = element.getAttribute('data-message');
+    element.addEventListener('click', function (tuy_y) {
+      tuy_y.preventDefault();
+      alert(jackie);
+    }); 
+  }); 
 }); 
 // DOMContentLoaded  end
