@@ -1,2 +1,41 @@
 @import './vendors/bootstrap';
 @import './vendors/_header';
+
+#loading{
+    width: 100%;
+    height: 100vh;
+    color: hotpink;
+    z-index: 100;
+    background: rgba(255,0,100,0.2);
+    position: absolute;
+    display: none;
+
+    #content{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+    }
+    &.show{
+      display: block;
+    }
+}
+
+#list{
+  list-style: none;
+  max-height: 600px;
+  min-height: 600px;
+  overflow-y: auto;
+  .img{
+    width: 200px;
+    height: 200px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

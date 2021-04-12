@@ -13,6 +13,12 @@
 
   <body>
     <span class='screen-darken'></span>
+    <div id="loading">
+      <div id="content" >
+        <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+      </div>
+    </div>
+
     <%= render 'layouts/partials/header/header' %>
     <%= yield %>
   </body>
