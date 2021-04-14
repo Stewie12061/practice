@@ -7,24 +7,34 @@
       </button>
     </div>
 
-    <div class="col-9">
-      <ul id="list">
-        <% 10.times do %>
-          <li>
-            <div class="row p-2">
-              <div class="col-3">
-                <div class="img">
-                  <img src="https://via.placeholder.com/300x300"/>
-                </div>
-              </div>
-              <div class="col-9">
-                <p>sadasdasdad</p>
-              </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
+
+<div class="row">
+  <div class="col-3">
+    <div class=" border p-2">
+      <div>Loaded: <span id="counter">10</span></div>
     </div>
   </div>
-</div>
 
+  <div class="col-9">
+    <ul id="list">
+      <% 10.times do %>
+      <li>
+        <div class="row p-2 border-bottom">
+          <div class="col-3">
+            <div class="img">
+            <%= image_tag 'https://via.placeholder.com/400x400' %>
+            </div>
+          </div>
+          <div class="col-9">
+            <div>
+              <h1>What is Lorem Ipsum?</h1>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <% end %>
+      <div id="insert-here"></div>
+    </ul>
+  </div>
+</div>

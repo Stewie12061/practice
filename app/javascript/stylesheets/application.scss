@@ -29,6 +29,7 @@
   max-height: 600px;
   min-height: 600px;
   overflow-y: auto;
+  overflow-x: hidden;
   .img{
     width: 200px;
     height: 200px;
@@ -38,4 +39,6 @@
     }
   }
 }
+
+
 
