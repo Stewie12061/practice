@@ -17,51 +17,26 @@ ActiveStorage.start()
 // thêm bởi: Stewie
 // lúc: xx:xx
 import '../stylesheets/application';
-import NavBarEvent from "./navbar";
-import insertMoreContent from "./more";
+import NavBarEvent from './navbar'
+import InsertMoreContent from './more'
 
 const images = require.context('../images', true)
 const imagePath = (name) => { images(name, true) }
 
 ////////////////////
 
+function hello(){
+  console.log('Hello')
+}
 
-
+console.log('A')
+hello()
 
 
 document.addEventListener("DOMContentLoaded", function () {
-
-  document.querySelectorAll('[data-trigger]').forEach(function (everyelement) {
-    let offcanvas_id = everyelement.getAttribute('data-trigger');
-    everyelement.addEventListener('click', function (e) {
-      e.preventDefault();
-      show_offcanvas(offcanvas_id);
-    });
-  });
-
-  document.querySelectorAll('.btn-close').forEach(function (everybutton) {
-    everybutton.addEventListener('click', function (e) {
-      close_offcanvas();
-    });
-  });
-
-  document.querySelector('.screen-darken').addEventListener('click', function (event) {
-    close_offcanvas();
-  });
-
-  document.querySelectorAll('[data-hi-trigger]').forEach(function (element) {
-    let jackie = element.getAttribute('data-message');
-    element.addEventListener('click', function (tuy_y) {
-      tuy_y.preventDefault();
-      alert(jackie);
-    });
-  });
-
-
-  //for function insertMoreContent
-  insertMoreContent();
+  NavBarEvent()
+  InsertMoreContent()
 });
-// DOMContentLoaded  end
 
 
 

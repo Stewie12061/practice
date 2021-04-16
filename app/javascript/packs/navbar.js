@@ -1,5 +1,3 @@
-
-
 function darken_screen(yesno) {
   if (yesno == true) {
     document.querySelector('.screen-darken').classList.add('active');
@@ -20,3 +18,33 @@ function show_offcanvas(offcanvas_id) {
   document.getElementById(offcanvas_id).classList.add('show');
   document.body.classList.add('offcanvas-active');
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('[data-trigger]').forEach(function (everyelement) {
+    let offcanvas_id = everyelement.getAttribute('data-trigger');
+    everyelement.addEventListener('click', function (e) {
+      e.preventDefault();
+      show_offcanvas(offcanvas_id);
+    });
+  });
+
+  document.querySelectorAll('.btn-close').forEach(function (everybutton) {
+    everybutton.addEventListener('click', function (e) {
+      close_offcanvas();
+    });
+  });
+
+  document.querySelector('.screen-darken').addEventListener('click', function (event) {
+    close_offcanvas();
+  });
+
+  document.querySelectorAll('[data-hi-trigger]').forEach(function (element) {
+    let jackie = element.getAttribute('data-message');
+    element.addEventListener('click', function (tuy_y) {
+      tuy_y.preventDefault();
+      alert(jackie);
+    });
+  });
+});

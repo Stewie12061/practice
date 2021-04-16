@@ -1,5 +1,3 @@
-
-
 function insertMoreContent() {
   let element = document.querySelector("#insert-here");
   let html = '<div class="row p-2 border-bottom">';
@@ -41,5 +39,13 @@ function insertMoreContent() {
       document.querySelector('#counter').innerText = parseInt(value) + 3
       // praseInt đổi ký tự sang số
     }, 2000);
-  }, 1000*5);
+  }, 1000*10);
 }
+
+export default insertMoreContent
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  //for function insertMoreContent
+  insertMoreContent();
+});
